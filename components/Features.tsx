@@ -11,7 +11,7 @@ const FEATURES = [
 
 export default function Features() {
   return (
-    <section id="caracteristicas" className="py-24 px-4 bg-white">
+    <section id="caracteristicas" className="py-24 px-4">
       <div className="max-w-6xl mx-auto">
         <ScrollReveal>
           <div className="text-center mb-16">

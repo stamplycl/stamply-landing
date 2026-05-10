@@ -17,7 +17,7 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="py-24 px-4 bg-white">
+    <section id="faq" className="py-24 px-4">
       <div className="max-w-2xl mx-auto">
         <ScrollReveal>
           <div className="text-center mb-12">

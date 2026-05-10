@@ -3,7 +3,7 @@ import ScrollReveal from "./ScrollReveal";
 
 export default function CTA() {
   return (
-    <section className="py-24 px-4 bg-[#f8f7ff]">
+    <section className="py-24 px-4">
       <div className="max-w-3xl mx-auto">
         <ScrollReveal>
           <div className="relative bg-gradient-to-br from-violet-600 via-indigo-600 to-purple-700 rounded-3xl px-8 py-16 overflow-hidden text-center shadow-[0_20px_60px_-15px_rgba(109,40,217,0.5)]">

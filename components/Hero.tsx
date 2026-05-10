@@ -2,13 +2,7 @@ import { ArrowRight, Calendar } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden grid-bg px-4 pt-28 pb-16">
-      {/* Soft gradient blobs */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-[-10%] left-[-5%] w-[600px] h-[600px] rounded-full bg-violet-200/30 blur-[120px]" />
-        <div className="absolute bottom-[-10%] right-[-5%] w-[500px] h-[500px] rounded-full bg-indigo-200/25 blur-[100px]" />
-      </div>
-
+    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-4 pt-28 pb-16">
       {/* Plus decorators */}
       <Plus className="top-24 left-[8%]" />
       <Plus className="top-24 right-[8%]" />

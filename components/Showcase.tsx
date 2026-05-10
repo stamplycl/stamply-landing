@@ -29,7 +29,7 @@ const ITEMS = [
 
 export default function Showcase() {
   return (
-    <section className="py-24 px-4 bg-white space-y-32">
+    <section className="py-24 px-4 space-y-32">
       {ITEMS.map((item) => (
         <div
           key={item.tag}

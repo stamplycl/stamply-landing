@@ -26,7 +26,7 @@ export default function CTA() {
                 Solicitar acceso <ArrowRight className="w-4 h-4" />
               </a>
               <a
-                href="https://cal.com/stamply/demo"
+                href="https://cal.com/stamplycl/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-white/10 text-white font-semibold rounded-xl px-6 py-3 text-[0.9375rem] border border-white/20 hover:bg-white/20 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-150 backdrop-blur-sm"

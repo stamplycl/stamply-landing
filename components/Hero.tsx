@@ -47,7 +47,7 @@ export default function Hero() {
           <ArrowRight className="w-4 h-4" />
         </a>
         <a
-          href="https://cal.com/stamply/demo"
+          href="https://cal.com/stamplycl/"
           target="_blank"
           rel="noopener noreferrer"
           className="btn-outline"

@@ -36,7 +36,7 @@ export default function Navbar() {
 
           {/* Desktop CTAs */}
           <div className="hidden md:flex items-center gap-2">
-            <a href="https://cal.com/stamply/demo" target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ padding: "0.5rem 1rem", fontSize: "0.875rem" }}>
+            <a href="https://cal.com/stamplycl/" target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ padding: "0.5rem 1rem", fontSize: "0.875rem" }}>
               Agendar demo
             </a>
             <a href="https://app.stamply.cl/solicitar-acceso" className="btn-ai" style={{ padding: "0.5rem 1rem", fontSize: "0.875rem" }}>
@@ -59,7 +59,7 @@ export default function Navbar() {
               </a>
             ))}
             <hr className="border-slate-100 my-1" />
-            <a href="https://cal.com/stamply/demo" target="_blank" rel="noopener noreferrer" className="btn-outline justify-center">
+            <a href="https://cal.com/stamplycl/" target="_blank" rel="noopener noreferrer" className="btn-outline justify-center">
               Agendar demo
             </a>
             <a href="https://stamply.cl/solicitar-acceso" className="btn-ai justify-center">

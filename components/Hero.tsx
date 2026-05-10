@@ -206,7 +206,7 @@ function AppPreview() {
         <div className="flex-1 p-5 space-y-4">
           <div>
             <p className="text-[10px] text-slate-400 font-medium">Buen día</p>
-            <p className="text-sm font-bold text-slate-800">Daniela Betancourt 👋</p>
+            <p className="text-sm font-bold text-slate-800">Lorenzo Vidal Araya 👋</p>
           </div>
 
           {/* Stat cards */}

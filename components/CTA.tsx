@@ -20,7 +20,7 @@ export default function CTA() {
 
             <div className="relative mt-9 flex flex-wrap items-center justify-center gap-3">
               <a
-                href="https://stamply.cl/solicitar-acceso"
+                href="https://app.stamply.cl/solicitar-acceso"
                 className="inline-flex items-center gap-2 bg-white text-violet-700 font-semibold rounded-xl px-6 py-3 text-[0.9375rem] shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 transition-all duration-150"
               >
                 Solicitar acceso <ArrowRight className="w-4 h-4" />

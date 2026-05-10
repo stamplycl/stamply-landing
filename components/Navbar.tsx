@@ -5,8 +5,8 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 
 const NAV_LINKS = [
-  { label: "Características",     href: "#caracteristicas" },
-  { label: "Cómo funciona",       href: "#como-funciona" },
+  { label: "Características", href: "#caracteristicas" },
+  { label: "Cómo funciona", href: "#como-funciona" },
   { label: "Preguntas frecuentes", href: "#faq" },
 ];
 
@@ -39,7 +39,7 @@ export default function Navbar() {
             <a href="https://cal.com/stamply/demo" target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ padding: "0.5rem 1rem", fontSize: "0.875rem" }}>
               Agendar demo
             </a>
-            <a href="https://stamply.cl/solicitar-acceso" className="btn-ai" style={{ padding: "0.5rem 1rem", fontSize: "0.875rem" }}>
+            <a href="https://app.stamply.cl/solicitar-acceso" className="btn-ai" style={{ padding: "0.5rem 1rem", fontSize: "0.875rem" }}>
               Solicitar acceso
             </a>
           </div>

@@ -36,6 +36,9 @@ export default function Navbar() {
 
           {/* Desktop CTAs */}
           <div className="hidden md:flex items-center gap-2">
+            <a href="https://app.stamply.cl/login" className="text-sm font-medium text-slate-500 hover:text-violet-700 transition-colors px-3 py-2">
+              Ingresar
+            </a>
             <a href="https://cal.com/stamplycl/" target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ padding: "0.5rem 1rem", fontSize: "0.875rem" }}>
               Agendar demo
             </a>
@@ -61,6 +64,9 @@ export default function Navbar() {
             <hr className="border-slate-100 my-1" />
             <a href="https://cal.com/stamplycl/" target="_blank" rel="noopener noreferrer" className="btn-outline justify-center">
               Agendar demo
+            </a>
+            <a href="https://app.stamply.cl/login" className="text-sm font-medium text-slate-700 hover:text-violet-700 transition-colors py-1">
+              Ingresar
             </a>
             <a href="https://stamply.cl/solicitar-acceso" className="btn-ai justify-center">
               Solicitar acceso

@@ -41,11 +41,19 @@ export default function FAQ() {
                   <span className="text-sm font-semibold text-slate-800">{faq.q}</span>
                   <ChevronDown className={`w-4 h-4 flex-shrink-0 text-slate-400 transition-transform duration-200 ${open === i ? "rotate-180" : ""}`} />
                 </button>
-                {open === i && (
-                  <div className="px-5 pb-4 text-sm text-slate-500 leading-relaxed border-t border-slate-100 pt-3">
-                    {faq.a}
+                {/* La respuesta se mantiene SIEMPRE en el DOM (colapso por CSS con
+                    grid-rows) para que sea rastreable por buscadores y por la
+                    verificación de Google, no solo al abrir el acordeón. */}
+                <div
+                  className={`grid transition-all duration-200 ease-out ${open === i ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
+                  aria-hidden={open !== i}
+                >
+                  <div className="overflow-hidden">
+                    <div className="px-5 pb-4 text-sm text-slate-500 leading-relaxed border-t border-slate-100 pt-3">
+                      {faq.a}
+                    </div>
                   </div>
-                )}
+                </div>
               </div>
             </ScrollReveal>
           ))}

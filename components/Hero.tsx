@@ -20,12 +20,10 @@ export default function Hero() {
         className="relative z-10 text-center font-bold text-slate-900 leading-[1.1] tracking-tight"
         style={{ fontSize: "clamp(2.5rem, 6vw, 4.25rem)" }}
       >
-        La forma moderna de{" "}
+        Stamply, la plataforma para{" "}
         <span className="bg-gradient-to-r from-violet-600 via-indigo-500 to-purple-600 bg-clip-text text-transparent">
-          gestionar tu oficina
+          receptores judiciales
         </span>
-        <br />
-        judicial
       </h1>
 
       {/* Subheadline */}
@@ -33,8 +31,9 @@ export default function Hero() {
         className="relative z-10 mt-6 text-center text-slate-500 max-w-xl leading-relaxed"
         style={{ fontSize: "clamp(1rem, 2vw, 1.125rem)" }}
       >
-        Stamply centraliza tus causas, genera estampes con inteligencia artificial,
-        administra documentos y coordina tu equipo — todo desde un solo lugar.
+        Stamply es el software que usan los receptores judiciales para gestionar su
+        oficina: centraliza tus causas, genera estampes con inteligencia artificial,
+        administra documentos y coordina a tu equipo — todo desde un solo lugar.
       </p>
 
       {/* CTAs */}

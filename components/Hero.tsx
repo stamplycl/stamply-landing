@@ -10,15 +10,15 @@ export default function Hero() {
       <Plus className="bottom-24 right-[12%]" />
 
       {/* Badge */}
-      <div className="animate-fade-up relative z-10 mb-6 inline-flex items-center gap-2 bg-white/90 border border-violet-200 rounded-full px-4 py-1.5 text-xs font-semibold text-violet-700 shadow-sm backdrop-blur-sm">
+      <div className="relative z-10 mb-6 inline-flex items-center gap-2 bg-white/90 border border-violet-200 rounded-full px-4 py-1.5 text-xs font-semibold text-violet-700 shadow-sm backdrop-blur-sm">
         <span className="w-2 h-2 rounded-full bg-violet-500 animate-pulse" />
         Plataforma exclusiva para receptores judiciales
       </div>
 
       {/* Headline */}
       <h1
-        className="animate-fade-up relative z-10 text-center font-bold text-slate-900 leading-[1.1] tracking-tight"
-        style={{ fontSize: "clamp(2.5rem, 6vw, 4.25rem)", animationDelay: "80ms" }}
+        className="relative z-10 text-center font-bold text-slate-900 leading-[1.1] tracking-tight"
+        style={{ fontSize: "clamp(2.5rem, 6vw, 4.25rem)" }}
       >
         La forma moderna de{" "}
         <span className="bg-gradient-to-r from-violet-600 via-indigo-500 to-purple-600 bg-clip-text text-transparent">
@@ -30,18 +30,15 @@ export default function Hero() {
 
       {/* Subheadline */}
       <p
-        className="animate-fade-up relative z-10 mt-6 text-center text-slate-500 max-w-xl leading-relaxed"
-        style={{ fontSize: "clamp(1rem, 2vw, 1.125rem)", animationDelay: "160ms" }}
+        className="relative z-10 mt-6 text-center text-slate-500 max-w-xl leading-relaxed"
+        style={{ fontSize: "clamp(1rem, 2vw, 1.125rem)" }}
       >
         Stamply centraliza tus causas, genera estampes con inteligencia artificial,
         administra documentos y coordina tu equipo — todo desde un solo lugar.
       </p>
 
       {/* CTAs */}
-      <div
-        className="animate-fade-up relative z-10 mt-9 flex flex-wrap items-center justify-center gap-3"
-        style={{ animationDelay: "240ms" }}
-      >
+      <div className="relative z-10 mt-9 flex flex-wrap items-center justify-center gap-3">
         <a href="https://app.stamply.cl/solicitar-acceso" className="btn-ai">
           Solicitar acceso
           <ArrowRight className="w-4 h-4" />
@@ -58,10 +55,7 @@ export default function Hero() {
       </div>
 
       {/* App mockup */}
-      <div
-        className="animate-fade-up relative z-10 mt-16 w-full max-w-5xl"
-        style={{ animationDelay: "360ms" }}
-      >
+      <div className="relative z-10 mt-16 w-full max-w-5xl">
         <div className="relative mx-auto">
           {/* Floating cards */}
           <FloatingCard

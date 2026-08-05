@@ -5,6 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://stamply.cl"),
   title: "Stamply — La plataforma digital para receptores judiciales",
   description:
     "Gestiona causas, genera estampes con inteligencia artificial, firma documentos y coordina tu trabajo judicial desde un solo lugar.",
@@ -16,6 +17,7 @@ export const metadata: Metadata = {
     siteName: "Stamply",
     locale: "es_CL",
     type: "website",
+    images: [{ url: "/icon-512.png", width: 512, height: 512, alt: "Stamply" }],
   },
 };
 

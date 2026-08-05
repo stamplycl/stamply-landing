@@ -1,12 +1,12 @@
+import BoltMark from "@/components/BoltMark";
+
 export default function Footer() {
   return (
     <footer className="bg-white border-t border-slate-100 py-10 px-4">
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-violet-600 to-indigo-600 flex items-center justify-center shadow-sm">
-            <span className="text-white font-bold text-xs">S</span>
-          </div>
+          <BoltMark className="w-7 h-7" />
           <span className="font-bold text-slate-800">Stamply</span>
         </div>
 
@@ -20,6 +20,9 @@ export default function Footer() {
           </a>
           <a href="/privacidad" className="hover:text-violet-600 transition-colors">
             Privacidad
+          </a>
+          <a href="/terminos" className="hover:text-violet-600 transition-colors">
+            Condiciones
           </a>
         </div>
 

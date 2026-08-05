@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
+import BoltMark from "@/components/BoltMark";
 
 const NAV_LINKS = [
   { label: "Características", href: "#caracteristicas" },
@@ -19,9 +20,7 @@ export default function Navbar() {
         <nav className="flex items-center justify-between bg-white/85 backdrop-blur-md border border-white/60 rounded-2xl px-5 py-3 shadow-[0_2px_20px_-4px_rgba(109,40,217,0.12)]">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 select-none">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-violet-600 to-indigo-600 flex items-center justify-center shadow-md">
-              <span className="text-white font-bold text-sm">S</span>
-            </div>
+            <BoltMark className="w-8 h-8" />
             <span className="font-bold text-slate-900 text-lg tracking-tight">Stamply</span>
           </Link>
 

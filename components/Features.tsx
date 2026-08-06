@@ -1,12 +1,12 @@
 import ScrollReveal from "./ScrollReveal";
 
 const FEATURES = [
-  { icon: "⚖️", title: "Gestión de causas",         description: "Registra y administra todas tus causas judiciales. Filtra por tribunal, estado y fecha con búsqueda instantánea." },
-  { icon: "⚡", title: "Estampe inteligente con IA", description: "Genera estampes de diligencias en segundos. La IA rellena los datos desde el expediente y tú solo firmas." },
-  { icon: "🛣️", title: "Ruta inteligente",           description: "Optimiza el orden de tus notificaciones del día. Stamply agrupa las diligencias por zona geográfica." },
-  { icon: "📄", title: "Documentos digitales",       description: "Almacena, organiza y firma documentos. Imprime con membrete oficial directamente desde cualquier causa." },
-  { icon: "💰", title: "Control de cobranza",        description: "Seguimiento de honorarios, pagos y saldos por causa. Genera informes para tu contabilidad." },
-  { icon: "👥", title: "Trabajo en equipo",          description: "Agrega funcionarios y colaboradores. Cada rol tiene sus propios permisos sobre las causas." },
+  { icon: "⚖️", title: "Gestión de causas", description: "Registra, organiza y administra todas tus causas. Encuéntralas al instante con filtros y etiquetas personalizadas." },
+  { icon: "⚡", title: "Estampe inteligente con IA", description: "Genera estampes de diligencias en segundos con asistencia inteligente de IA. Simplifica tu gestión: revisa y firma." },
+  { icon: "🛣️", title: "Ruta inteligente", description: "Organiza tus diligencias considerando distintos factores para optimizar tu planificación y realiza el recorrido con tu aplicación favorita." },
+  { icon: "📄", title: "Documentos digitales", description: "Almacena, organiza y firma documentos desde cualquier lugar. Mantén tu documentación protegida y segura en Stamply." },
+  { icon: "💰", title: "Control de cobranza", description: "Realiza seguimiento de tus pagos y saldos por causa. Emite boletas, automatiza cobros y genera informes para tu contabilidad." },
+  { icon: "👥", title: "Trabajo en equipo", description: "Agrega colaboradores con permisos personalizados, habilita la firma de documentos y coordina tu equipo mediante chat interno." },
 ];
 
 export default function Features() {
@@ -19,10 +19,10 @@ export default function Features() {
               Características
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
-              Todo lo que necesita tu oficina judicial
+              Todo lo que tu oficina necesita
             </h2>
             <p className="mt-4 text-slate-500 max-w-xl mx-auto leading-relaxed">
-              Diseñado específicamente para receptores judiciales y sus equipos en Chile.
+              Diseñado para receptores judiciales y sus equipos.
             </p>
           </div>
         </ScrollReveal>

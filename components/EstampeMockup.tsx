@@ -27,7 +27,7 @@ export default function EstampeMockup() {
           <div className="flex items-start justify-between border-b border-slate-100 pb-4">
             <div>
               <p className="font-bold text-slate-800 text-[13px]">LORENZO VIDAL ARAYA</p>
-              <p className="text-slate-500">Receptor Judicial Titular</p>
+              <p className="text-slate-500">Receptor Judicial</p>
               <p className="text-slate-500">Primer Juzgado Civil de Santiago</p>
               <p className="text-slate-500 mt-1">Av. Libertador B. O'Higgins 1449, Of. 412</p>
               <p className="text-slate-500">Teléfono: +56 2 2696 1200</p>
@@ -43,7 +43,7 @@ export default function EstampeMockup() {
           {/* Badge IA */}
           <div className="flex items-center gap-1.5">
             <span className="inline-flex items-center gap-1 bg-violet-100 text-violet-700 text-[9px] font-semibold px-2 py-0.5 rounded-full">
-              ✦ Generado con IA
+              ✦ Revisado por Stamply IA
             </span>
             <span className="text-slate-300">·</span>
             <span className="text-slate-400 text-[9px]">Revisado y firmado por el receptor</span>

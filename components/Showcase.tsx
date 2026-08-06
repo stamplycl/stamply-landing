@@ -7,7 +7,7 @@ const ITEMS = [
     tag: "Estampe inteligente",
     title: "De la causa al estampe en segundos",
     description:
-      "La IA de Stamply analiza los datos del expediente y redacta el estampe de diligencia automáticamente. Tú solo revisas, editas si es necesario y firmas. El documento queda guardado y listo para imprimir con tu membrete.",
+      "Registra el resultado de tu diligencia y utiliza la asistencia inteligente de Stamply para crear, editar y perfeccionar tus estampes antes de firmarlos.",
     badge: "✦ Inteligencia Artificial",
     mockup: <EstampeMockup />,
     direction: "left" as const,
@@ -70,9 +70,9 @@ export default function Showcase() {
 
 const BULLETS: Record<string, string[]> = {
   "Estampe inteligente": [
-    "Redacción automática según tipo de diligencia",
-    "Edición libre antes de firmar",
-    "Impresión directa con membrete personalizado",
+    "Sugerencia de estampe según resultado",
+    "Redacción y revisión asistida por IA",
+    "Edición libre y carga de imágenes",
     "Historial de estampes por causa",
   ],
   "Ruta inteligente": [

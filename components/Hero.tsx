@@ -12,7 +12,7 @@ export default function Hero() {
       {/* Badge */}
       <div className="relative z-10 mb-6 inline-flex items-center gap-2 bg-white/90 border border-violet-200 rounded-full px-4 py-1.5 text-xs font-semibold text-violet-700 shadow-sm backdrop-blur-sm">
         <span className="w-2 h-2 rounded-full bg-violet-500 animate-pulse" />
-        Plataforma exclusiva para receptores judiciales
+        Desarrollado con receptores judiciales
       </div>
 
       {/* Headline */}
@@ -20,10 +20,11 @@ export default function Hero() {
         className="relative z-10 text-center font-bold text-slate-900 leading-[1.1] tracking-tight"
         style={{ fontSize: "clamp(2.5rem, 6vw, 4.25rem)" }}
       >
-        Stamply, la plataforma para{" "}
+        Stamply, {" "}
         <span className="bg-gradient-to-r from-violet-600 via-indigo-500 to-purple-600 bg-clip-text text-transparent">
-          receptores judiciales
+          gestión inteligente
         </span>
+        <span className="block">para tu oficina</span>
       </h1>
 
       {/* Subheadline */}
@@ -31,9 +32,8 @@ export default function Hero() {
         className="relative z-10 mt-6 text-center text-slate-500 max-w-xl leading-relaxed"
         style={{ fontSize: "clamp(1rem, 2vw, 1.125rem)" }}
       >
-        Stamply es el software que usan los receptores judiciales para gestionar su
-        oficina: centraliza tus causas, genera estampes con inteligencia artificial,
-        administra documentos y coordina a tu equipo — todo desde un solo lugar.
+        Centraliza tus causas, genera estampes con inteligencia artificial,
+        administra documentos y coordina a tu equipo, todo desde un solo lugar.
       </p>
 
       {/* CTAs */}
@@ -177,11 +177,10 @@ function AppPreview() {
           ].map((item) => (
             <div
               key={item.label}
-              className={`flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium transition-colors ${
-                item.active
-                  ? "bg-violet-50 text-violet-700"
-                  : "text-slate-400"
-              }`}
+              className={`flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium transition-colors ${item.active
+                ? "bg-violet-50 text-violet-700"
+                : "text-slate-400"
+                }`}
             >
               <span className="text-sm">{item.icon}</span>
               {item.label}
@@ -200,8 +199,8 @@ function AppPreview() {
           <div className="grid grid-cols-3 gap-3">
             {[
               { label: "Causas activas", value: "142", color: "bg-violet-500" },
-              { label: "Tramitadas hoy", value: "18",  color: "bg-indigo-500" },
-              { label: "Pendientes",     value: "7",   color: "bg-amber-400" },
+              { label: "Tramitadas hoy", value: "18", color: "bg-indigo-500" },
+              { label: "Pendientes", value: "7", color: "bg-amber-400" },
             ].map((s) => (
               <div
                 key={s.label}
@@ -223,7 +222,7 @@ function AppPreview() {
             <div className="divide-y divide-slate-50">
               {[
                 { rol: "C-2241-2024", tribunal: "1° Juz. Civil Santiago", estado: "En tramitación" },
-                { rol: "C-0892-2024", tribunal: "Juz. Letras Laboral",    estado: "Notificada" },
+                { rol: "C-0892-2024", tribunal: "Juz. Letras Laboral", estado: "Notificada" },
                 { rol: "C-3107-2025", tribunal: "2° Juz. Civil Santiago", estado: "Pendiente" },
               ].map((c) => (
                 <div key={c.rol} className="px-4 py-2.5 flex items-center justify-between">
@@ -232,13 +231,12 @@ function AppPreview() {
                     <p className="text-[10px] text-slate-400">{c.tribunal}</p>
                   </div>
                   <span
-                    className={`text-[9px] font-semibold px-2 py-0.5 rounded-full ${
-                      c.estado === "Notificada"
-                        ? "bg-emerald-50 text-emerald-600"
-                        : c.estado === "Pendiente"
+                    className={`text-[9px] font-semibold px-2 py-0.5 rounded-full ${c.estado === "Notificada"
+                      ? "bg-emerald-50 text-emerald-600"
+                      : c.estado === "Pendiente"
                         ? "bg-amber-50 text-amber-600"
                         : "bg-violet-50 text-violet-600"
-                    }`}
+                      }`}
                   >
                     {c.estado}
                   </span>

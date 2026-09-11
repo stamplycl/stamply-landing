@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import LegalShell from "@/components/LegalShell";
 
-const UPDATED = "4 de agosto de 2026";
+const UPDATED = "11 de septiembre de 2026";
 
 export const metadata: Metadata = {
   title: "Política de Privacidad — Stamply",
@@ -109,6 +109,33 @@ export default function PrivacidadPage() {
           , incluidos sus requisitos de Uso Limitado. No usamos los datos de Google para publicidad
           y no los vendemos ni los transferimos a terceros, salvo lo estrictamente necesario para
           prestar el Servicio, cumplir la ley o con tu consentimiento.
+        </p>
+      </div>
+
+      <h3>3.3 Inteligencia artificial y datos de Google</h3>
+      <div className="callout">
+        <p>
+          <strong>Los datos que recibimos a través de las APIs de Google nunca se usan para
+          entrenar modelos de inteligencia artificial.</strong> Los permisos <code>gmail.send</code>{" "}
+          y <code>drive.file</code> son de un solo sentido: los usamos únicamente para <em>enviar</em>{" "}
+          correos y <em>guardar</em> archivos que Stamply genera; no leemos el contenido de tu
+          bandeja de Gmail ni los archivos existentes en tu Drive, por lo que no hay datos de Google
+          que puedan transferirse a un servicio de IA.
+        </p>
+        <p>
+          Stamply usa inteligencia artificial (a través de OpenRouter, con modelos Gemma de Google)
+          exclusivamente para procesar documentos legales que tú mismo cargas o generas dentro de la
+          aplicación (revisión de plantillas, extracción de datos desde capturas del sitio público
+          del Poder Judicial). Ninguno de estos procesos usa datos obtenidos vía las APIs de Gmail o
+          Google Drive. El uso de estos datos derivados cumple con la{" "}
+          <a
+            href="https://developers.google.com/terms/api-services-user-data-policy#additional_requirements_for_specific_api_scopes"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Política de Uso Limitado de Google
+          </a>
+          .
         </p>
       </div>
 

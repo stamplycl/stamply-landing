@@ -19,7 +19,7 @@ export default function LegalShell({
         <article className="max-w-3xl mx-auto">
           {/* Header */}
           <header className="mb-10">
-            <span className="inline-flex items-center rounded-full bg-brand-50 border border-brand-200 px-3 py-1 text-xs font-medium text-brand-700">
+            <span className="inline-flex items-center rounded-full bg-brand-50 border border-brand-200 px-3 py-1 text-xs font-medium text-brand-500">
               Documento legal
             </span>
             <h1 className="mt-4 text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">
@@ -32,7 +32,7 @@ export default function LegalShell({
           </header>
 
           {/* Body */}
-          <div className="legal-prose bg-white/80 backdrop-blur-sm border border-slate-100 rounded-2xl shadow-[0_2px_20px_-4px_rgba(109,40,217,0.10)] p-6 sm:p-9">
+          <div className="legal-prose bg-white/80 backdrop-blur-sm border border-slate-100 rounded-2xl shadow-[0_2px_20px_-4px_rgba(19,15,103,0.10)] p-6 sm:p-9">
             {children}
           </div>
         </article>

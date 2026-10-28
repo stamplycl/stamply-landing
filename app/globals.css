@@ -1,105 +1,85 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", system-ui, sans-serif;
+  --font-sans: var(--font-schibsted), system-ui, sans-serif;
 
-  --color-brand-50:  #F5F3FF;
-  --color-brand-100: #EDE9FE;
-  --color-brand-200: #DDD6FE;
-  --color-brand-300: #C4B5FD;
-  --color-brand-400: #A78BFA;
-  --color-brand-500: #8B5CF6;
-  --color-brand-600: #7C3AED;
-  --color-brand-700: #6D28D9;
-  --color-brand-800: #5B21B6;
-  --color-brand-900: #4C1D95;
+  /* Paleta brand: índigo eléctrico (fuente: Stamply-app/src/components/layout/stamply-mark.ts) */
+  --color-brand-50:  #EAE9FC;
+  --color-brand-75:  #DEDDFA;
+  --color-brand-100: #C3C1F6;
+  --color-brand-200: #9D98F0;
+  --color-brand-300: #7670EB;
+  --color-brand-400: #4F46E5;
+  --color-brand-500: #2920DF;
+  --color-brand-600: #221AB7;
+  --color-brand-700: #1B148F;
+  --color-brand-800: #130F67;
+  --color-brand-900: #0C093E;
+  --color-brand-950: #040316;
 
-  --animate-float:      float 4s ease-in-out infinite;
-  --animate-float-slow: float-slow 6s ease-in-out infinite;
-  --animate-fade-up:    fade-up 0.6s ease-out both;
-  --animate-gradient-x: gradient-x 4s ease infinite;
-
-  @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50%       { transform: translateY(-10px); }
-  }
-  @keyframes float-slow {
-    0%, 100% { transform: translateY(0px) rotate(-1deg); }
-    50%       { transform: translateY(-14px) rotate(1deg); }
-  }
-  @keyframes fade-up {
-    from { opacity: 0; transform: translateY(24px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-  @keyframes gradient-x {
-    0%, 100% { background-position: 0% 50%; }
-    50%       { background-position: 100% 50%; }
-  }
+  /* Sello: el amarillo solo marca el destino */
+  --color-seal: #FFD43B;
+  --color-seal-deep: #F2B200;
+  --color-canvas: #F4F4F8;
+  --color-ink: #0F172A;
 }
+
+html { scroll-behavior: smooth; }
+
+/* Subrayado amarillo del titular: se "estampa" de izquierda a derecha */
+@keyframes stamply-highlight { from { background-size: 0% 100%; } to { background-size: 100% 100%; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
 body {
   font-family: var(--font-sans);
+  background: var(--color-canvas);
+  color: var(--color-ink);
   -webkit-font-smoothing: antialiased;
+  font-feature-settings: "tnum" 0;
 }
 
-/* Grid background */
+h1, h2, h3 { letter-spacing: -0.02em; }
+.tabular { font-variant-numeric: tabular-nums; }
+
+/* Lienzo con la cuadrícula tenue de la app */
 .grid-bg {
   background-image:
-    linear-gradient(rgba(109,40,217,0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(109,40,217,0.035) 1px, transparent 1px);
-  background-size: 48px 48px;
+    linear-gradient(rgba(79,70,229,0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(79,70,229,0.045) 1px, transparent 1px);
+  background-size: 44px 44px;
 }
 
-/* AI gradient button */
-.btn-ai {
-  background: linear-gradient(135deg, #7c3aed, #4f46e5, #7c3aed);
-  background-size: 200% 200%;
-  animation: gradient-x 4s ease infinite;
-  color: #fff;
-  font-weight: 600;
-  border-radius: 10px;
-  padding: 0.6875rem 1.5rem;
-  font-size: 0.9375rem;
-  transition: box-shadow 0.2s ease, transform 0.15s ease, filter 0.15s ease;
-  box-shadow: 0 4px 15px -3px rgba(124,58,237,0.45);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  cursor: pointer;
-  text-decoration: none;
-  white-space: nowrap;
+/* Botón principal: índigo sólido con sombra dura (como la hoja del isotipo) */
+.btn-primary {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  background: #4F46E5; color: #fff; font-weight: 600; font-size: 0.9375rem;
+  border-radius: 10px; padding: 0.75rem 1.4rem; white-space: nowrap;
+  box-shadow: 4px 4px 0 #221AB7;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
 }
-.btn-ai:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px -5px rgba(124,58,237,0.55);
-  filter: brightness(1.08);
-}
-.btn-ai:active { transform: translateY(0); filter: brightness(0.96); }
+.btn-primary:hover { background: #2920DF; transform: translate(-2px, -2px); box-shadow: 6px 6px 0 #1B148F; }
+.btn-primary:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 #1B148F; }
 
-/* Outline button */
-.btn-outline {
-  background: rgba(255,255,255,0.9);
-  border: 1px solid rgba(15,23,42,0.12);
-  color: #1e1b4b;
-  font-weight: 600;
-  border-radius: 10px;
-  padding: 0.6875rem 1.5rem;
-  font-size: 0.9375rem;
-  transition: box-shadow 0.2s ease, transform 0.15s ease, background 0.15s ease;
-  box-shadow: 0 1px 3px rgba(15,23,42,0.06);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  cursor: pointer;
-  text-decoration: none;
-  white-space: nowrap;
+.btn-ghost {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  background: #fff; color: #130F67; font-weight: 600; font-size: 0.9375rem;
+  border: 1px solid rgba(15,23,42,0.12); border-radius: 10px; padding: 0.75rem 1.4rem; white-space: nowrap;
+  transition: transform 0.15s ease, border-color 0.15s ease;
 }
-.btn-outline:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px -4px rgba(15,23,42,0.14);
-  background: #fff;
+.btn-ghost:hover { transform: translateY(-2px); border-color: #9D98F0; }
+
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  color: #4F46E5;
 }
-.btn-outline:active { transform: translateY(0); }
+.eyebrow::before { content: ""; width: 10px; height: 10px; border-radius: 2px; background: #F2B200; }
+
+/* Marco de las maquetas de producto */
+.mock {
+  background: #fff; border: 1px solid #E2E2EA; border-radius: 16px;
+  box-shadow: 0 1px 0 rgba(15,23,42,0.04), 0 24px 48px -24px rgba(19,15,103,0.28);
+}
 
 /* Legal documents (privacidad, términos) */
 .legal-prose { color: #475569; font-size: 15px; line-height: 1.7; }
@@ -127,14 +107,14 @@ body {
 }
 .legal-prose li { margin-bottom: 0.4rem; }
 .legal-prose strong { color: #1e293b; font-weight: 600; }
-.legal-prose a { color: #6d28d9; text-decoration: underline; text-underline-offset: 2px; }
-.legal-prose a:hover { color: #5b21b6; }
+.legal-prose a { color: #4F46E5; text-decoration: underline; text-underline-offset: 2px; }
+.legal-prose a:hover { color: #2920DF; }
 .legal-prose .callout {
-  background: #f5f3ff;
-  border: 1px solid #ddd6fe;
+  background: #EAE9FC;
+  border: 1px solid #C3C1F6;
   border-radius: 12px;
   padding: 1rem 1.25rem;
   margin: 1.5rem 0;
-  color: #4c1d95;
+  color: #1B148F;
 }
 .legal-prose .callout p:last-child { margin-bottom: 0; }

@@ -1,34 +1,74 @@
-import BoltMark from "@/components/BoltMark";
+import { MarkTile } from "@/components/brand/StamplyMark";
+import { LINKS, TRIAL } from "@/lib/links";
+
+const COLS = [
+  {
+    title: "Producto",
+    links: [
+      { label: "Módulos", href: "/#modulos" },
+      { label: "Integraciones", href: "/#integraciones" },
+      { label: "Seguridad", href: "/#seguridad" },
+      { label: "Preguntas frecuentes", href: "/#faq" },
+    ],
+  },
+  {
+    title: "Empieza",
+    links: [
+      { label: TRIAL.cta, href: LINKS.trial },
+      { label: "Agendar demo", href: LINKS.demo },
+      { label: "Ingresar", href: LINKS.login },
+      { label: "soporte@stamply.cl", href: LINKS.support },
+    ],
+  },
+  {
+    title: "Legal",
+    links: [
+      { label: "Marco legal", href: "/#legal" },
+      { label: "Política de Privacidad", href: "/privacidad" },
+      { label: "Condiciones del Servicio", href: "/terminos" },
+    ],
+  },
+];
 
 export default function Footer() {
   return (
-    <footer className="bg-white border-t border-slate-100 py-10 px-4">
-      <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-        {/* Logo */}
-        <div className="flex items-center gap-2">
-          <BoltMark className="w-7 h-7" />
-          <span className="font-bold text-slate-800">Stamply</span>
+    <footer className="bg-brand-950 text-brand-100 pt-16 pb-10 px-4">
+      <div className="max-w-6xl mx-auto">
+        <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
+          <div>
+            <div className="flex items-center gap-2">
+              <MarkTile className="w-8 h-8" />
+              <span className="font-semibold text-white text-lg">Stamply</span>
+            </div>
+            <p className="mt-4 text-sm leading-relaxed text-brand-200 max-w-xs">
+              El documento sabe adónde tiene que ir. Gestión integral para receptores judiciales de Chile.
+            </p>
+          </div>
+          {COLS.map((c) => (
+            <div key={c.title}>
+              <p className="text-xs font-semibold uppercase tracking-wider text-white">{c.title}</p>
+              <ul className="mt-4 space-y-2.5 text-sm">
+                {c.links.map((l) => (
+                  <li key={l.label}>
+                    <a href={l.href} className="text-brand-200 hover:text-white transition-colors">
+                      {l.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
 
-        {/* Links */}
-        <div className="flex items-center gap-5 text-xs text-slate-400">
-          <a href="https://app.stamply.cl/solicitar-acceso" className="hover:text-violet-600 transition-colors">
-            Solicitar acceso
-          </a>
-          <a href="mailto:soporte@stamply.cl" className="hover:text-violet-600 transition-colors">
-            soporte@stamply.cl
-          </a>
-          <a href="/privacidad" className="hover:text-violet-600 transition-colors">
-            Privacidad
-          </a>
-          <a href="/terminos" className="hover:text-violet-600 transition-colors">
-            Condiciones
-          </a>
+        <div className="mt-14 border-t border-white/10 pt-6 text-xs leading-relaxed text-brand-200/80 space-y-3">
+          <p>
+            Stamply es una herramienta de gestión y apoyo para el trabajo del receptor judicial. No es un organismo
+            público ni está afiliado al Poder Judicial, al Servicio de Impuestos Internos, a Google ni a Mercado Pago;
+            sus nombres se usan solo para describir integraciones. La fe pública, el contenido de cada actuación y su
+            firma son siempre responsabilidad exclusiva del receptor, conforme al Código Orgánico de Tribunales.
+          </p>
+          <p>© {new Date().getFullYear()} Stamply. Hecho en Chile.</p>
         </div>
-
-        <p className="text-xs text-slate-300">
-          © {new Date().getFullYear()} Stamply. Hecho en Chile.
-        </p>
       </div>
     </footer>
   );

@@ -1,39 +1,35 @@
-import { ArrowRight, Calendar } from "lucide-react";
+import { ArrowRight, CalendarDays, Mail } from "lucide-react";
+import { AnimatedSheet } from "@/components/brand/StamplyMark";
 import ScrollReveal from "./ScrollReveal";
+import { LINKS, TRIAL } from "@/lib/links";
 
 export default function CTA() {
   return (
     <section className="py-24 px-4">
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <ScrollReveal>
-          <div className="relative bg-gradient-to-br from-violet-600 via-indigo-600 to-purple-700 rounded-3xl px-8 py-16 overflow-hidden text-center shadow-[0_20px_60px_-15px_rgba(109,40,217,0.5)]">
-            <div className="absolute -top-12 -right-12 w-48 h-48 rounded-full bg-white/5" />
-            <div className="absolute -bottom-16 -left-10 w-64 h-64 rounded-full bg-white/5" />
-
-            <h2 className="relative text-3xl sm:text-4xl font-bold text-white tracking-tight leading-tight">
-              Transforma tu oficina judicial hoy
-            </h2>
-            <p className="relative mt-4 text-violet-200 leading-relaxed max-w-lg mx-auto">
-              Únete a los receptores que ya usan Stamply para trabajar con más orden,
-              velocidad y menos papel.
-            </p>
-
-            <div className="relative mt-9 flex flex-wrap items-center justify-center gap-3">
-              <a
-                href="https://app.stamply.cl/solicitar-acceso"
-                className="inline-flex items-center gap-2 bg-white text-violet-700 font-semibold rounded-xl px-6 py-3 text-[0.9375rem] shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 transition-all duration-150"
-              >
-                Solicitar acceso <ArrowRight className="w-4 h-4" />
-              </a>
-              <a
-                href="https://cal.com/stamplycl/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-white/10 text-white font-semibold rounded-xl px-6 py-3 text-[0.9375rem] border border-white/20 hover:bg-white/20 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-150 backdrop-blur-sm"
-              >
-                <Calendar className="w-4 h-4" /> Agendar demo
+          <div className="relative rounded-3xl bg-brand-800 px-6 sm:px-14 py-14 overflow-hidden grid md:grid-cols-[1fr_auto] gap-10 items-center shadow-[10px_10px_0_#221AB7]">
+            <div>
+              <h2 className="text-3xl sm:text-4xl font-semibold text-white leading-tight">
+                Deja que cada documento llegue a su destino.
+              </h2>
+              <p className="mt-4 text-brand-100 leading-relaxed max-w-lg">
+                Prueba Stamply {TRIAL.period} gratis con tus propias causas. Sin tarjeta de crédito, con acompañamiento para importar
+                tus encargos y configurar tus modelos.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <a href={LINKS.trial} className="inline-flex items-center gap-2 rounded-[10px] bg-seal px-6 py-3 font-semibold text-brand-900 hover:-translate-y-0.5 transition-transform">
+                  Comenzar prueba gratis <ArrowRight className="w-4 h-4" />
+                </a>
+                <a href={LINKS.demo} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-[10px] border border-white/25 px-6 py-3 font-semibold text-white hover:bg-white/10 transition-colors">
+                  <CalendarDays className="w-4 h-4" /> Hablar con nosotros
+                </a>
+              </div>
+              <a href={LINKS.support} className="mt-6 inline-flex items-center gap-2 text-sm text-brand-200 hover:text-white">
+                <Mail className="w-4 h-4" /> soporte@stamply.cl
               </a>
             </div>
+            <AnimatedSheet className="w-36 sm:w-44 mx-auto" />
           </div>
         </ScrollReveal>
       </div>

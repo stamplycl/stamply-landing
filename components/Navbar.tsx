@@ -3,73 +3,70 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
-import BoltMark from "@/components/BoltMark";
+import { MarkTile } from "@/components/brand/StamplyMark";
+import { LINKS, TRIAL } from "@/lib/links";
 
 const NAV_LINKS = [
-  { label: "Características", href: "#caracteristicas" },
-  { label: "Cómo funciona", href: "#como-funciona" },
-  { label: "Preguntas frecuentes", href: "#faq" },
+  { label: "Módulos", href: "/#modulos" },
+  { label: "Integraciones", href: "/#integraciones" },
+  { label: "Marco legal", href: "/#legal" },
+  { label: "Seguridad", href: "/#seguridad" },
+  { label: "Preguntas", href: "/#faq" },
 ];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 inset-x-0 z-50 px-4 pt-4">
+    <header className="fixed top-0 inset-x-0 z-50 px-4 pt-3">
       <div className="max-w-6xl mx-auto">
-        <nav className="flex items-center justify-between bg-white/85 backdrop-blur-md border border-white/60 rounded-2xl px-5 py-3 shadow-[0_2px_20px_-4px_rgba(109,40,217,0.12)]">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 select-none">
-            <BoltMark className="w-8 h-8" />
-            <span className="font-bold text-slate-900 text-lg tracking-tight">Stamply</span>
+        <nav className="flex items-center justify-between bg-white/90 backdrop-blur-md border border-slate-200/70 rounded-2xl px-4 py-2.5 shadow-[0_8px_30px_-12px_rgba(19,15,103,0.18)]">
+          <Link href="/" className="flex items-center gap-2 select-none" aria-label="Stamply, inicio">
+            <MarkTile className="w-8 h-8" />
+            <span className="font-semibold text-slate-900 text-lg tracking-tight">Stamply</span>
           </Link>
 
-          {/* Desktop links */}
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden lg:flex items-center gap-6">
             {NAV_LINKS.map((l) => (
-              <a key={l.href} href={l.href} className="text-sm text-slate-500 hover:text-violet-700 font-medium transition-colors">
+              <a key={l.href} href={l.href} className="text-sm text-slate-500 hover:text-brand-400 font-medium transition-colors">
                 {l.label}
               </a>
             ))}
           </div>
 
-          {/* Desktop CTAs */}
           <div className="hidden md:flex items-center gap-2">
-            <a href="https://app.stamply.cl/login" className="text-sm font-medium text-slate-500 hover:text-violet-700 transition-colors px-3 py-2">
+            <a href={LINKS.login} className="text-sm font-medium text-slate-500 hover:text-brand-400 transition-colors px-3 py-2">
               Ingresar
             </a>
-            <a href="https://cal.com/stamplycl/" target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ padding: "0.5rem 1rem", fontSize: "0.875rem" }}>
+            <a href={LINKS.demo} target="_blank" rel="noopener noreferrer" className="btn-ghost !py-2 !px-4 !text-sm">
               Agendar demo
             </a>
-            <a href="https://app.stamply.cl/solicitar-acceso" className="btn-ai" style={{ padding: "0.5rem 1rem", fontSize: "0.875rem" }}>
-              Solicitar acceso
+            <a href={LINKS.trial} className="btn-primary !py-2 !px-4 !text-sm">
+              {TRIAL.cta}
             </a>
           </div>
 
-          {/* Mobile toggle */}
-          <button className="md:hidden p-2 rounded-lg text-slate-500 hover:bg-slate-100 transition-colors" onClick={() => setOpen(!open)} aria-label="Menú">
+          <button
+            className="md:hidden p-2 rounded-lg text-slate-500 hover:bg-slate-100 transition-colors"
+            onClick={() => setOpen(!open)}
+            aria-label="Menú"
+            aria-expanded={open}
+          >
             {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </nav>
 
-        {/* Mobile dropdown */}
         {open && (
           <div className="md:hidden mt-2 bg-white rounded-2xl border border-slate-100 shadow-xl p-5 flex flex-col gap-3">
             {NAV_LINKS.map((l) => (
-              <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="text-sm font-medium text-slate-700 hover:text-violet-700 py-1">
+              <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="text-sm font-medium text-slate-700 hover:text-brand-400 py-1">
                 {l.label}
               </a>
             ))}
             <hr className="border-slate-100 my-1" />
-            <a href="https://cal.com/stamplycl/" target="_blank" rel="noopener noreferrer" className="btn-outline justify-center">
-              Agendar demo
-            </a>
-            <a href="https://app.stamply.cl/login" className="text-sm font-medium text-slate-700 hover:text-violet-700 transition-colors py-1">
-              Ingresar
-            </a>
-            <a href="https://stamply.cl/solicitar-acceso" className="btn-ai justify-center">
-              Solicitar acceso
-            </a>
+            <a href={LINKS.login} className="text-sm font-medium text-slate-700 py-1">Ingresar</a>
+            <a href={LINKS.demo} target="_blank" rel="noopener noreferrer" className="btn-ghost">Agendar demo</a>
+            <a href={LINKS.trial} className="btn-primary">{TRIAL.cta}</a>
           </div>
         )}
       </div>

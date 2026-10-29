@@ -9,32 +9,32 @@ const NORMS = [
   {
     law: "Código Orgánico de Tribunales",
     ref: "Arts. 389 y siguientes",
-    what: "El receptor es ministro de fe y auxiliar de la administración de justicia. Stamply organiza y redacta, pero la fe pública y la responsabilidad de cada actuación son siempre del receptor.",
+    what: "La fe pública es siempre del receptor. Stamply ordena y asiste.",
   },
   {
     law: "Ley N° 20.886",
     ref: "Tramitación digital de los procedimientos judiciales",
-    what: "Las actuaciones de los ministros de fe se incorporan a la carpeta electrónica firmadas con firma electrónica avanzada. Stamply lleva el control de qué está firmado y qué falta subir.",
+    what: "Actuaciones firmadas electrónicamente. Stamply controla qué falta subir.",
   },
   {
     law: "Ley N° 19.799",
     ref: "Documentos electrónicos y firma electrónica",
-    what: "La firma electrónica avanzada tiene el mismo valor que la manuscrita. Stamply firma con tu propio certificado de Firma Electrónica Avanzada, emitido por un prestador acreditado; no crea ni custodia certificados.",
+    what: "Vale como firma manuscrita. Usas tu propio certificado acreditado.",
   },
   {
     law: "Código de Procedimiento Civil",
     ref: "Notificaciones, Arts. 40, 44 y 48",
-    what: "Los modelos de estampe y los trámites siguen la estructura de cada notificación y requerimiento, incluidas las búsquedas que exige el Art. 44.",
+    what: "Estampes y trámites siguen cada notificación, incluido el Art. 44.",
   },
   {
     law: "Ley N° 19.628 y Ley N° 21.719",
     ref: "Protección de datos personales",
-    what: "Tratamos los datos solo para prestar el servicio, con aislamiento por oficina y minimización ante la IA. Preparamos la operación para la nueva ley de datos personales y su Agencia.",
+    what: "Datos aislados por oficina y minimizados. Preparados para la nueva ley.",
   },
   {
     law: "Ley sobre Impuesto a la Renta",
     ref: "Boletas de honorarios y retención",
-    what: "Las liquidaciones consideran la retención de honorarios vigente para cada año y se asocian a la boleta electrónica emitida en el SII.",
+    what: "Retención de honorarios vigente, asociada a tu boleta SII.",
   },
 ];
 
@@ -58,10 +58,7 @@ export default function Legal() {
           <h2 className="mt-4 text-3xl sm:text-4xl font-semibold max-w-3xl">
             Construido sobre las normas que rigen tu oficio.
           </h2>
-          <p className="mt-4 text-brand-50/90 max-w-2xl">
-            Stamply no reemplaza la ley ni tu criterio: los respeta. Cada módulo está diseñado sobre la normativa que
-            regula al receptor judicial, la tramitación digital y los datos de las personas que notificas.
-          </p>
+          <p className="mt-4 text-brand-50/90 max-w-2xl">Stamply respeta la ley y tu criterio.</p>
         </ScrollReveal>
 
         <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">

@@ -14,7 +14,8 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main>
+      {/* overflow-x-clip: las animaciones laterales de ScrollReveal no deben generar scroll horizontal */}
+      <main className="overflow-x-clip">
         <Hero />
         <Problem />
         <Modules />

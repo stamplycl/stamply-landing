@@ -14,8 +14,7 @@ export default function CTA() {
                 Deja que cada documento llegue a su destino.
               </h2>
               <p className="mt-4 text-brand-100 leading-relaxed max-w-lg">
-                Prueba Stamply {TRIAL.period} gratis con tus propias causas. Sin tarjeta de crédito, con acompañamiento para importar
-                tus encargos y configurar tus modelos.
+                {TRIAL.period} gratis con tus causas reales. Sin tarjeta.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a href={LINKS.trial} className="inline-flex items-center gap-2 rounded-[10px] bg-seal px-6 py-3 font-semibold text-brand-900 hover:-translate-y-0.5 transition-transform">

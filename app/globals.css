@@ -26,6 +26,8 @@
 
 html { scroll-behavior: smooth; }
 
+@keyframes stamply-rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+
 /* Subrayado amarillo del titular: se "estampa" de izquierda a derecha */
 @keyframes stamply-highlight { from { background-size: 0% 100%; } to { background-size: 100% 100%; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

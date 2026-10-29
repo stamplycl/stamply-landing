@@ -2,12 +2,12 @@ import { Building, EyeOff, KeyRound, Lock, ShieldCheck, UserCog } from "lucide-r
 import ScrollReveal from "./ScrollReveal";
 
 const ITEMS = [
-  { Icon: Building, t: "Cada oficina, aislada", d: "Las causas viven en un espacio propio por oficina, con políticas de acceso a nivel de base de datos. Nadie de otra oficina las ve." },
-  { Icon: EyeOff, t: "IA con datos protegidos", d: "RUT, nombres y domicilios se reemplazan por marcadores antes de enviarse al modelo de IA, y Stamply no usa tus datos para entrenar modelos." },
-  { Icon: Lock, t: "Credenciales cifradas", d: "La Clave Poder Judicial y los accesos a Google se guardan cifrados (AES-256-GCM) y solo se usan para la tarea que autorizaste." },
-  { Icon: KeyRound, t: "Tu firma es tuya", d: "Tu Firma Electrónica Avanzada queda siempre en posesión del receptor y su oficina. Stamply envía el documento a firmar y verifica que vuelva intacto." },
-  { Icon: UserCog, t: "Roles del oficio", d: "El receptor firma y autoriza. El asistente prepara, ordena y marca. Cada acción queda registrada." },
-  { Icon: ShieldCheck, t: "Tus derechos sobre los datos", d: "Acceso, rectificación, supresión y portabilidad según la ley chilena, descritos en nuestra Política de Privacidad." },
+  { Icon: Building, t: "Cada oficina, aislada", d: "Nadie de otra oficina ve tus causas." },
+  { Icon: EyeOff, t: "Datos protegidos", d: "Los datos personales se ocultan antes de procesarse." },
+  { Icon: Lock, t: "Credenciales cifradas", d: "Tus claves se guardan cifradas." },
+  { Icon: KeyRound, t: "Tu firma es tuya", d: "Siempre en poder del receptor y su oficina." },
+  { Icon: UserCog, t: "Roles del oficio", d: "Cada acción queda registrada." },
+  { Icon: ShieldCheck, t: "Tus derechos", d: "Acceso, rectificación y supresión de tus datos." },
 ];
 
 export default function Security() {

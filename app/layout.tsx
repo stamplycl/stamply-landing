@@ -4,7 +4,7 @@ import "./globals.css";
 
 const schibsted = Schibsted_Grotesk({ subsets: ["latin"], variable: "--font-schibsted", display: "swap" });
 
-const TITLE = "Stamply — El documento sabe adónde tiene que ir";
+const TITLE = "Stamply — Gestión integral para receptores judiciales de Chile";
 const DESCRIPTION =
   "La plataforma de gestión hecha para receptores judiciales de Chile: causas, trámites, ruta inteligente, estampe inteligente, Firma Electrónica Avanzada, recorrido en vivo sin perder conexión, seguimiento PJUD y cobranza automática con boletas de honorarios con SII. Prueba gratis 3 meses.";
 

@@ -10,7 +10,6 @@ const NAV_LINKS = [
   { label: "Módulos", href: "/#modulos" },
   { label: "Integraciones", href: "/#integraciones" },
   { label: "Marco legal", href: "/#legal" },
-  { label: "Seguridad", href: "/#seguridad" },
   { label: "Preguntas", href: "/#faq" },
 ];
 
@@ -26,16 +25,16 @@ export default function Navbar() {
             <span className="font-semibold text-slate-900 text-lg tracking-tight">Stamply</span>
           </Link>
 
-          <div className="hidden lg:flex items-center gap-6">
+          <div className="hidden lg:flex items-center gap-6 mx-6">
             {NAV_LINKS.map((l) => (
-              <a key={l.href} href={l.href} className="text-sm text-slate-500 hover:text-brand-400 font-medium transition-colors">
+              <a key={l.href} href={l.href} className="text-sm text-slate-500 hover:text-brand-400 font-medium transition-colors whitespace-nowrap">
                 {l.label}
               </a>
             ))}
           </div>
 
           <div className="hidden md:flex items-center gap-2">
-            <a href={LINKS.login} className="text-sm font-medium text-slate-500 hover:text-brand-400 transition-colors px-3 py-2">
+            <a href={LINKS.login} className="text-sm font-medium text-slate-500 hover:text-brand-400 transition-colors px-3 py-2 whitespace-nowrap">
               Ingresar
             </a>
             <a href={LINKS.demo} target="_blank" rel="noopener noreferrer" className="btn-ghost !py-2 !px-4 !text-sm">

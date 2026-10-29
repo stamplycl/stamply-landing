@@ -2,12 +2,12 @@ import { X } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 
 const PAINS = [
-  { k: "Causas en planillas", d: "Excel sin control de duplicados: la misma causa ingresada dos veces, con datos distintos." },
-  { k: "Estampes a mano", d: "Un Art. 44 implica varias búsquedas, la notificación, el requerimiento y la oposición. Cada uno, redactado de nuevo." },
-  { k: "Rutas improvisadas", d: "Se vuelve dos veces al mismo domicilio, lo urgente queda para mañana y sin señal se pierde el registro." },
-  { k: "Firmas fuera del flujo", d: "Exportar, firmar aparte, renombrar, volver a subir. Cada documento, uno por uno." },
-  { k: "PJUD sin control", d: "¿Se subió? ¿Quedó proveído? Revisar causa por causa en la Oficina Judicial Virtual." },
-  { k: "Cobranza desconectada", d: "Liquidaciones, boletas de honorarios y transferencias que no cuadran con lo diligenciado." },
+  { k: "Causas en planillas", d: "Duplicadas y desactualizadas." },
+  { k: "Estampes a mano", d: "Cada uno, redactado de nuevo." },
+  { k: "Rutas improvisadas", d: "Vueltas de más y plazos que se escapan." },
+  { k: "Firmas fuera del flujo", d: "Exportar, firmar, renombrar, subir." },
+  { k: "PJUD sin control", d: "¿Se subió? Revisar causa por causa." },
+  { k: "Cobranza desconectada", d: "Pagos que no cuadran con lo diligenciado." },
 ];
 
 export default function Problem() {
@@ -21,10 +21,6 @@ export default function Problem() {
           <h2 className="mt-5 text-3xl sm:text-5xl font-bold max-w-3xl leading-[1.05]">
             El oficio es preciso. <span className="text-brand-200">Las herramientas, no.</span>
           </h2>
-          <p className="mt-5 text-lg text-brand-100/85 max-w-2xl">
-            El receptor es ministro de fe: cada actuación tiene plazo, forma y responsable. Pero el día a día se arma con
-            herramientas genéricas que no saben nada de eso.
-          </p>
         </ScrollReveal>
         <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {PAINS.map((p, i) => (

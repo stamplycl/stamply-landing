@@ -10,8 +10,8 @@ const MODULES = [
     n: "01",
     name: "Causas",
     title: "Cada causa, una sola vez.",
-    body: "Ingresa la causa con su ROL, competencia y tribunal. Stamply detecta duplicados antes de crearla y completa casi por sí sola el resto desde el expediente electrónico del Poder Judicial: carátula, materia, partes y representantes. Todo queda en un mismo espacio de trabajo, junto a domicilios, documentos e historial.",
-    points: ["Sin causas duplicadas", "Datos completados desde el expediente", "RUT verificado automáticamente", "Importación de encargos desde planillas"],
+    body: "Ingresa ROL, competencia y tribunal. Stamply evita duplicados y completa el resto desde el expediente electrónico.",
+    points: ["Sin duplicados", "Datos desde el expediente", "RUT verificado"],
     Mock: CausasMock,
   },
   {
@@ -19,9 +19,9 @@ const MODULES = [
     n: "02",
     name: "Trámites",
     title: "Todo lo que hay que hacer, con su plazo.",
-    body: "Cada causa genera sus trámites —búsquedas, notificaciones personales, del Art. 44 y por cédula, requerimientos de pago, embargos, lanzamientos y trámites ante el Conservador de Bienes Raíces— con estado, responsable y plazo visibles para toda la oficina.",
-    highlight: { title: "Del terreno a la oficina, al instante", text: "Registras el resultado desde la ruta y la oficina lo ve en el momento: en línea, o apenas vuelve la señal. Sin llamadas, sin notas en papel, sin esperar a que vuelvas." },
-    points: ["Resultado de terreno en tiempo real", "Plazos a la vista y alertas", "Trámites ante el Conservador (CBR)", "Arancel aplicado automáticamente"],
+    body: "Búsquedas, notificaciones, embargos y trámites ante el CBR, con estado y plazo a la vista de toda la oficina.",
+    highlight: { title: "Del terreno a la oficina, al instante", text: "La oficina ve el resultado apenas lo registras. Sin señal, llega al volver la conexión." },
+    points: ["Plazos y alertas", "Trámites CBR", "Arancel automático"],
     Mock: TramitesMock,
   },
   {
@@ -29,9 +29,9 @@ const MODULES = [
     n: "03",
     name: "Ruta inteligente",
     title: "Tu ruta del día, ordenada antes de salir.",
-    body: "El motor de rutas prioriza las diligencias por urgencia, cercanía, valor económico e incertidumbre, y las agrupa por domicilio para aprovechar cada visita y recorrer lo mínimo. Exporta la ruta a tu app preferida —Spoke, Waze o Google Maps— o imprímela junto a sus documentos con tu membrete, en un clic.",
-    highlight: { title: "Recorrido en vivo, aunque no haya internet", text: "Navegación con GPS y voz hasta cada domicilio. Si te quedas sin señal no pierdes nada: la ruta queda guardada cifrada en tu teléfono, registras resultados igual y todo se sincroniza solo al volver la conexión." },
-    points: ["Agrupación por domicilio", "Exporta a Spoke, Waze o Google Maps", "Impresión con membrete en un clic", "Recorrido en vivo con GPS y voz"],
+    body: "Prioriza por urgencia, cercanía y valor, y agrupa por domicilio para recorrer lo mínimo.",
+    highlight: { title: "Recorrido en vivo, aunque no haya internet", text: "GPS y voz hasta cada domicilio. Sin señal, la ruta sigue en tu teléfono." },
+    points: ["Spoke, Waze o Google Maps", "Impresión con membrete", "Agrupada por domicilio"],
     Mock: RutaMock,
   },
   {
@@ -39,8 +39,8 @@ const MODULES = [
     n: "04",
     name: "Estampe inteligente",
     title: "Estampes correctos en minutos.",
-    body: "Del resultado de la diligencia a un estampe redactado desde tu propia biblioteca de modelos, con género, número y concordancia correctos. La redacción asistida revisa solo lo que agregaste y sugiere correcciones mínimas; tú decides el texto final. Agrega imágenes y Stamply las ordena, y combina varios PDF en un solo documento.",
-    points: ["Biblioteca de modelos de la oficina", "Corrección de género y concordancia", "Imágenes ordenadas automáticamente", "Combina PDF en un solo documento"],
+    body: "Desde tus modelos, con género y concordancia correctos. Tú decides el texto final.",
+    points: ["Tus modelos", "Imágenes ordenadas", "PDF combinado"],
     Mock: EstampeMock,
   },
   {
@@ -48,8 +48,8 @@ const MODULES = [
     n: "05",
     name: "Firma Electrónica Avanzada",
     title: "Firma sin salir del flujo.",
-    body: "Firma con tu Firma Electrónica Avanzada cualquier documento subido a Stamply, uno o en lote. Déjala activa en la oficina y firma desde el teléfono, o autoriza a tu equipo con permisos que defines y revocas: siempre queda en posesión del receptor y su oficina. Tras cada firma, Stamply verifica que el certificado esté vigente y autenticado y que el documento no haya cambiado, y deja registro de esa verificación.",
-    points: ["Firma cualquier documento subido", "Firma remota desde el teléfono", "Delegación a la oficina con permisos", "Certificado verificado y autenticado"],
+    body: "Firma cualquier documento, uno o en lote: en la oficina, desde el teléfono o delegada con permisos.",
+    points: ["Firma remota", "Delegación con permisos", "Certificado verificado"],
     Mock: FirmasMock,
   },
   {
@@ -57,8 +57,8 @@ const MODULES = [
     n: "06",
     name: "Documentos y PJUD",
     title: "Nada se pierde. Nada se queda sin subir.",
-    body: "Lo firmado queda con respaldo seguro en Stamply y, además, en tu Google Drive, marcado según su estado en el Poder Judicial. Con tu Clave Poder Judicial, guardada cifrada, Stamply consulta el expediente en la Oficina Judicial Virtual para que sepas qué está subido y qué falta.",
-    points: ["Respaldo seguro en Stamply y en Drive", "Control de lo subido al PJUD", "Consulta de expedientes en la OJV", "Cartas certificadas y documentos operativos"],
+    body: "Respaldo seguro en Stamply y en tu Drive, y el control de lo subido a la Oficina Judicial Virtual.",
+    points: ["Respaldo seguro", "Control PJUD", "Cartas certificadas"],
     Mock: DocumentosMock,
   },
   {
@@ -66,8 +66,8 @@ const MODULES = [
     n: "07",
     name: "Cobranza automática",
     title: "Cobra lo que diligenciaste.",
-    body: "El arancel se aplica solo a cada diligencia realizada y alimenta la liquidación del cliente. Cada semana Stamply envía el cobro desde su propio correo de cobranza —nunca desde tu Gmail—, concilia la cartola con los pagos recibidos, asocia cada pago a su boleta de honorarios con SII y mantiene al día el balance de cuenta de cada cliente.",
-    points: ["Arancel automático", "Balance de cuenta por cliente", "Cobro automático por correo", "Conciliación bancaria y boletas SII"],
+    body: "El arancel se aplica solo, el cobro sale cada semana desde Stamply y cada pago se cuadra con su boleta.",
+    points: ["Cobro automático", "Conciliación bancaria", "Boletas con SII"],
     Mock: CobranzaMock,
   },
 ];
@@ -83,7 +83,7 @@ export default function Modules() {
             Del encargo al cobro, <span className="text-brand-400">en un solo lugar.</span>
           </h2>
           <p className="mt-5 text-lg text-brand-800/80 max-w-2xl">
-            Siete módulos conectados. Lo que ingresas una vez avanza solo a la etapa siguiente, sin volver a digitar.
+            Siete módulos conectados. Lo ingresas una vez y avanza solo.
           </p>
         </ScrollReveal>
 

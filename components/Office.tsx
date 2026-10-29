@@ -51,7 +51,7 @@ function CbrScene() {
           INSCRITO
         </motion.div>
       </div>
-      <div className="text-[11px] text-brand-100 leading-snug">Inscripciones, certificados y alzamientos ante el Conservador, con su propio seguimiento.</div>
+      <div className="text-[11px] text-brand-100 leading-snug">Inscripciones, certificados y alzamientos.</div>
     </div>
   );
 }
@@ -111,11 +111,11 @@ function UsersScene() {
 }
 
 const FEATURES = [
-  { Icon: MessagesSquare, t: "Chat interno", d: "Conversa con tu equipo sobre cada causa sin salir de Stamply, y con soporte cuando lo necesites.", Scene: ChatScene, wide: true },
-  { Icon: Building2, t: "Conservador de Bienes Raíces", d: "Los trámites ante el CBR viven junto a la causa.", Scene: CbrScene },
-  { Icon: Calculator, t: "Arancel automático", d: "Cada diligencia toma su valor según tu arancel, sin calcular a mano.", Scene: ArancelScene },
-  { Icon: Scale, t: "Balance de cuenta por cliente", d: "Lo diligenciado, lo cobrado y lo pagado de cada cliente, siempre cuadrado.", Scene: BalanceScene },
-  { Icon: Users, t: "Multiusuario con roles", d: "Receptor, asistentes y equipo de terreno, cada uno con sus permisos. Cada acción queda registrada.", Scene: UsersScene },
+  { Icon: MessagesSquare, t: "Chat interno", d: "Tu equipo y soporte, junto a cada causa.", Scene: ChatScene, wide: true },
+  { Icon: Building2, t: "Conservador de Bienes Raíces", d: "Sus trámites, junto a la causa.", Scene: CbrScene },
+  { Icon: Calculator, t: "Arancel automático", d: "Cada diligencia, valorizada sola.", Scene: ArancelScene },
+  { Icon: Scale, t: "Balance de cuenta por cliente", d: "Cobrado y pagado, siempre cuadrado.", Scene: BalanceScene },
+  { Icon: Users, t: "Multiusuario con roles", d: "Cada uno con sus permisos.", Scene: UsersScene },
 ];
 
 export default function Office() {
@@ -127,9 +127,6 @@ export default function Office() {
           <h2 className="mt-5 text-3xl sm:text-5xl font-bold max-w-3xl leading-[1.05]">
             Un equipo, <span className="text-brand-200">una sola oficina digital.</span>
           </h2>
-          <p className="mt-5 text-lg text-brand-100/85 max-w-2xl">
-            Más allá de la diligencia: lo que tu oficina necesita para coordinarse, cobrar y crecer.
-          </p>
         </ScrollReveal>
 
         <div className="mt-12 grid md:grid-cols-3 gap-4">

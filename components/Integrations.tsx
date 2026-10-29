@@ -21,14 +21,14 @@ type Integration = {
 };
 
 const INTEGRATIONS: Integration[] = [
-  { name: "Poder Judicial", sub: "Oficina Judicial Virtual", logo: "/integrations/pjud-blanco.png", logoBg: "#0B2A5B", logoClass: "h-10", d: "Consulta de expedientes y control de lo subido, con tu Clave Poder Judicial guardada con cifrado AES-256." },
-  { name: "Servicio de Impuestos Internos", sub: "Boletas de honorarios", logo: "/integrations/sii.jpg", logoClass: "h-10", d: "Importa tu informe de boletas emitidas y asócialas a cada liquidación, con su retención." },
-  { name: "Gmail", sub: "Envíos desde tu cuenta", logo: "/integrations/gmail.svg", logoClass: "h-9", d: "Envía estampes, certificados y documentos desde tu propia cuenta. Solo envío: Stamply no lee tu bandeja. Los cobros automáticos no salen de tu Gmail." },
-  { name: "Google Drive", sub: "Respaldo documental", logo: "/integrations/google-drive.svg", logoClass: "h-9", d: "Cada documento que Stamply genera se respalda en tu Drive, ordenado por causa." },
-  { name: "Google Maps", sub: "Ruta inteligente", logo: "/integrations/google-maps.svg", logoClass: "h-10", d: "Geocodificación de domicilios, mapa del recorrido y navegación en vivo." },
-  { name: "Firma Electrónica Avanzada", sub: "Tu certificado, en tu poder", Visual: SignatureMini, d: "Conectada mediante la app de escritorio de Stamply: firma en la oficina, desde el teléfono o delegada con permisos." },
-  { name: "Mercado Libre · Mercado Pago", sub: "Próximamente", logo: "/integrations/mercado-libre.png", logoBg: "#FFE600", logoClass: "h-11", soon: true, d: "Links de pago para que tus clientes paguen en línea y el cobro se concilie solo." },
-  { name: "Tu página de receptor", sub: "Próximamente", Visual: ReceptorPage, soon: true, d: "Tu propia página web personalizada, diseñada y asesorada por Stamply, para que clientes y mandantes te encuentren y te encarguen." },
+  { name: "Poder Judicial", sub: "Oficina Judicial Virtual", logo: "/integrations/pjud-blanco.png", logoBg: "#0B2A5B", logoClass: "h-10", d: "Expedientes y control de lo subido, con tu clave cifrada." },
+  { name: "Servicio de Impuestos Internos", sub: "Boletas de honorarios", logo: "/integrations/sii.jpg", logoClass: "h-10", d: "Boletas de honorarios asociadas a cada cobro." },
+  { name: "Gmail", sub: "Envíos desde tu cuenta", logo: "/integrations/gmail.svg", logoClass: "h-9", d: "Envía documentos desde tu cuenta. Solo envío, nunca lectura." },
+  { name: "Google Drive", sub: "Respaldo documental", logo: "/integrations/google-drive.svg", logoClass: "h-9", d: "Respaldo de tus documentos, ordenado por causa." },
+  { name: "Google Maps", sub: "Ruta inteligente", logo: "/integrations/google-maps.svg", logoClass: "h-10", d: "Domicilios en el mapa y navegación en vivo." },
+  { name: "Firma Electrónica Avanzada", sub: "Tu certificado, en tu poder", Visual: SignatureMini, d: "En la oficina, desde el teléfono o delegada." },
+  { name: "Mercado Libre · Mercado Pago", sub: "Próximamente", logo: "/integrations/mercado-libre.png", logoBg: "#FFE600", logoClass: "h-11", soon: true, d: "Pagos en línea que se concilian solos." },
+  { name: "Tu página de receptor", sub: "Próximamente", Visual: ReceptorPage, soon: true, d: "Tu web profesional, asesorada por Stamply." },
 ];
 
 /** Mini sitio del receptor, del mismo alto que los recuadros de logo. */
@@ -83,10 +83,7 @@ export default function Integrations() {
             <h2 className="mt-5 text-3xl sm:text-5xl font-bold text-brand-900 max-w-3xl leading-[1.05]">
               Conectado con los servicios que ya usas en <span className="text-brand-400">Chile</span>.
             </h2>
-            <p className="mt-5 text-brand-800/80 text-lg max-w-2xl">
-              Stamply no te pide cambiar de banco, de correo ni de certificado. Se conecta con lo que ya tienes, con tus
-              propias credenciales y con permisos que puedes revocar cuando quieras.
-            </p>
+            <p className="mt-5 text-brand-800/80 text-lg max-w-2xl">Sin cambiar de banco, correo ni certificado.</p>
           </ScrollReveal>
 
           {/* Núcleo: Stamply al centro con órbitas de conexión */}
